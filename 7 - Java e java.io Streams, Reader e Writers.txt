@@ -1,0 +1,57 @@
+https://cursos.alura.com.br/formacao-java
+https://cursos.alura.com.br/course/java-trabalhando-com-io
+
+ctrl+shift+o => organizar os imports
+
+InputStream e OutputStream lidam com dados binários, por exemplo imagens e PDFs, já se estivermos lidando com caracteres, utilizamos o Reader ou Writer.
+Há ainda as classes que fazem a transição de um mundo para outro, como é o caso da InputStreamReader, que recebe um InputStream de bytes e o transforma em um Reader. 
+Da mesma forma, temos o OutputStreamWriter, que faz o mesmo, só que para a escrita.
+
+1 - LEITURA COM JAVA.IO 
+Abertura de arquivos;
+O método correto para leitura de uma linha é readLine()
+Leitura linha a linha do arquivo e detecção de seu fim;
+Utilização de exceptions pelo Java IO caso a operação de leitura não saia como esperado;
+Classes abstratas e concretas para leitura.
+
+2 - ESCRITA COM JAVA.IO
+escrever em arquivos;
+escrever usando outputs diferentes;
+Ler e escrever dados abstraindo implementação;
+Classes abstratas e concretas para escrita e leitura.
+
+3 - FILEWRITER E PRINTSTREAM
+Várias alternativas para estabelecer uma saída para um arquivo de texto, como:
+	A classe FileWriter
+	A classe PrintStream
+	A classe PrintWriter
+Alguns detalhes da classe System, como :
+	O atributo System.out é do tipo PrintStream
+	O método System.lineSeparator() devolve os caracteres que representam uma nova linha
+	O método System.currentTimeMillis() devolve os milissegundos que passaram desde 1 de janeiro de 1970
+
+4 - USANDO JAVA.UTIL.SCANNER
+Leitura de arquivos com Scanner
+Uso de delimitador com Scanner
+Formatação de texto e também de números
+Definição de Localização para formatar o texto.
+
+5 - ENCODING E CHARSETS
+Unicode, Encodings e Charsets
+A classe que representa um encoding ou Character Set é Charset e o método estático para retornar uma referência com o charset default é defaultCharset()
+Clicar com o botão direito do mouse sobre o nome do arquivo que estamos lendo e selecionar a opção "Properties". Clicar na opção "Other", selecionar UTF-8
+Precisamos especificar o UTF-8 para o Java, no arquivo de teste. 
+
+6 - SERIALIZAÇÃO DE OBJETOS
+Desserialização - transformação de um fluxo binário em um objeto
+Serialização - transformação do objeto em um fluxo binário
+O serialVersionUID define a versão atual da classe e esse valor fica gravado na representação binária do objeto
+A criação do fluxo binário a partir de um objeto é chamado de serialização;
+A criação de um objeto a partir de um um fluxo binário é chamado de desserialização;
+A classe deve implementar a interface java.io.Serializable;
+A serialização/desserialização funciona em cascata e também com herança;
+Existe a palavra-chave transient para indicar que o atributo não deve ser serializado;
+É boa prática colocar o atributo estático serialVersionUID para versionar a classe;
+A versão sempre fica guardada no fluxo binário;
+Se não colocarmos explicitamente o serialVersionUID, a versão será gerada dinamicamente;
+É raro usar a serialização na "unha", mas é um conhecimento importante, pois será utilizado por outras bibliotecas.
